@@ -1,0 +1,8 @@
+{
+  "name": "Famliy",
+  "app_id": "5fb0af48",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
