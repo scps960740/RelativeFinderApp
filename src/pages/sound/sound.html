@@ -1,0 +1,83 @@
+<!--
+  Generated template for the SoundPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>SoundPage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="BgColor" padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>請 選 擇 語 言</ion-label>
+      <ion-select (ngModelChange)="LanChanged($event)" [(ngModel)]="Lan" interface="popover">
+        <ion-option selected="true" value="Ch">中 文</ion-option>
+        <ion-option value="Tw">台 語</ion-option>
+        <ion-option value="En">英 語</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="ChB">
+
+    <ion-list class="BgColor" no-lines>
+
+      <ion-item class="BgColor" *ngFor="let Ch of ChGroup">
+        <div class="AudioFlex">
+          <h1 class="AudioText">{{Ch.name}}</h1>
+          <div (click)="Start(Ch.name)" class="AudioBtn">
+            播 放
+          </div>
+        </div>
+      </ion-item>
+
+      
+    </ion-list>
+
+
+  </div>
+  <div *ngIf="TwB">
+
+     <ion-list class="BgColor" no-lines>
+
+      <ion-item class="BgColor" *ngFor="let Tw of TwGroup">
+        <div class="AudioFlex">
+          <h1 class="AudioText">{{Tw.name}}</h1>
+          <div (click)="Start(Tw.name)" class="AudioBtn">
+            播 放
+          </div>
+        </div>
+      </ion-item>
+
+      
+    </ion-list>
+
+  </div>
+  <div *ngIf="EnB">
+
+      <ion-list class="BgColor" no-lines>
+
+          <ion-item class="BgColor" *ngFor="let En of EnGroup">
+            <div class="AudioFlex">
+              <h1 class="AudioText">{{En.name}}</h1>
+              <div (click)="Start(En.name)" class="AudioBtn">
+                播 放
+              </div>
+            </div>
+          </ion-item>
+    
+          
+        </ion-list>
+
+  </div>
+
+
+</ion-content>

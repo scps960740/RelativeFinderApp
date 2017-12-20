@@ -1,16 +1,510 @@
-// http://ionicframework.com/docs/theming/
+//---------------------IndexPage---------------------
+@media screen and (min-width: 0px) and (max-width: 374px) {
+  div.IndexBtnFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+  }
+  img.SelectImg {
+    //   margin-top: 10%;
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.BgColor{
+  background: linear-gradient(#d8dbcd,#d8dbcd);
+}
+
+.Logo{
+  width: 50%;
+}
+
+.Bg{
+  background: linear-gradient(#d8dbcd,#d8dbcd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.FamliyTitle {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.FamliySub {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  font-size: 14px;
+  letter-spacing: 7px;
+  margin-top: -10%;
+}
+
+.GoBtn {
+  width: 50%;
+  height: 50px;
+  background-color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 50px;
+  // box-shadow: 3px 3px 12px gray;
+  margin-top: -4%;
+}
+
+.GoBtn:active {
+  background-color: #818181;
+}
+
+.IndexBtnFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 130px;
+  margin-top: -90%;
+  margin-left: 2%;
+}
+
+.IndexFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #95749e;
+  color: white;
+  height: 30px;
+}
+
+.IconGo {
+  font-size: 30px;
+  margin-left: 5%;
+}
+
+//---------------------SelectPage---------------------
+.SelectBtnFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  margin-top: -5%;
+}
+
+.SelectBtn {
+  width: 80%;
+  height: 50px;
+  background-color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 12px gray;
+  margin-top: 10%;
+}
+
+.SelectBtn:active {
+    background-color: #818181;
+  }
+
+.SelectImg {
+  //   margin-top: 10%;
+  width: 50%;
+  height: 50%;
+}
+
+.SelectImgDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.SelectFooter {
+  padding-bottom: 5%;
+  height: auto;
+}
+
+//---------------------FamliySearchPage---------------------
+.ColFlex {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+.TextBar {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(209, 209, 209);
+  border-radius: 5px;
+  box-shadow: 3px 3px 12px gray;
+  margin-top: 5%;
+  margin-bottom: -8%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color:black;
+  font-size: 24px;
+  padding-right: 5%;
+  overflow: scroll;
+}
+
+.ComBtn {
+  width: 20%;
+  height: 100%;
+  background-color: #95749e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 12px gray;
+  margin-top: 10%;
+}
+
+.ComBtn:active {
+  background-color: #765a7e;
+}
 
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+//---------------------ExamPage---------------------
+
+
+.RadioGroup{
+
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 5%;
+
+}
+
+.ExamFoo{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  //align-items: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  
+}
+
+.ExamBtn {
+  width: 40%;
+  height: 50px;
+  background-color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 50px;
+  // box-shadow: 3px 3px 12px gray;
+  //margin-top: -4%;
+}
+
+//---------------------LoginPage---------------------
+
+.InputRadius{
+
+  border-radius: 50px;
+  //box-shadow: 3px 3px 12px gray;
+  width: 300px;
+
+
+}
+
+.ContentBg{
+  background: linear-gradient(#d8dbcd,#d8dbcd);
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  height: 100%;
+  width: 100%;
+  // flex-wrap: wrap;
+}
+
+.LoginInput{
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  //margin-top: 20%;
+  flex-wrap: wrap;
+
+}
+
+.LoginBtn {
+  width: 300px;
+  height: 50px;
+  background-color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 50px;
+  // box-shadow: 3px 3px 12px gray;
+  //margin-top: -4%;
+}
+
+.LoginText{
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+
+//---------------------SoundPage---------------------
+
+
+@media screen and (min-width: 0px) and (max-width: 330px) {
+
+  div.QrImg{
+    width: 100%;
+    height: 330px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+
+}
+
+.AudioText{
+
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+
+}
+
+.AudioFlex{
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+
+}
+
+.AudioBtn {
+  width: 200px;
+  height: 50px;
+  background-color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 50px;
+  box-shadow: 3px 3px 12px gray;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+
+//---------------------GroupPage---------------------
+
+.QrImg{
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+//---------------------TreePage---------------------
+
+
+.TreeFlex{
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 400px;
+}
+
+.Tree1{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 5%;
+  height: 30px;
+}
+
+.Tree2{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 5%;
+  height: 30px;
+}
+
+.Tree3{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 5%;
+  height: 30px;
+}
+
+.Tree4{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5%;
+  height: 30px;
+}
+
+.Tree5{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5%;
+  height: 30px;
+
+}
+
+.Tree1PeoLeft{
+  width: 10%;
+  height: 55px;
+  background-color: white;
+  margin-left: 3%;
+  box-shadow: 3px 3px 12px gray;
+  font-size: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.Tree1PeoRight{
+  width: 10%;
+  height: 55px;
+  background-color: white;
+  margin-right: 3%;
+  box-shadow: 3px 3px 12px gray;
+  font-size: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.Tree1Center{
+  width: 10%;
+  height: 55px;
+  margin-right: 16%;
+  margin-left: 16%;
+}
+
+.Tree2Peo{
+  width: 10%;
+  height: 55px;
+  background-color: white;
+  margin-right: 2%;
+  margin-left: 2%;
+  box-shadow: 3px 3px 12px gray;
+  font-size: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.Tree2Center{
+  width: 10%;
+  height: 55px;
+  background-color: white;
+  margin-right: 16%;
+  margin-left: 16%;
+  box-shadow: 3px 3px 12px gray;
+  font-size: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+
+.Tree3Peo{
+  width: 10%;
+  height: 55px;
+  background-color: white;
+  margin-right: 2%;
+  margin-left: 2%;
+  box-shadow: 3px 3px 12px gray;
+  font-size: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+
+.Tree4Peo{
+  width: 10%;
+  height: 55px;
+  background-color: white;
+  margin-right: 2%;
+  margin-left: 2%;
+  box-shadow: 3px 3px 12px gray;
+  font-size: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.Tree5Peo{
+  width: 10%;
+  height: 55px;
+  background-color: white;
+  margin-right: 2%;
+  margin-left: 2%;
+  box-shadow: 3px 3px 12px gray;
+  font-size: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.TreeCenter{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
