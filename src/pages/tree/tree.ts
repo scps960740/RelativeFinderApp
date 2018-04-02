@@ -87,32 +87,55 @@ export class TreePage {
 
   ShowEditAddWindow(tree){
 
-    let prompt = this.alertCtrl.create({
-      title: '提醒',
-      message: "請輸入您要新增或修改的內容",
-      inputs: [
-        {
-          name: 'content',
-        },
-      ],
-      buttons: [
-        {
-          text: '取消',
-          handler: data => {
-            
-          }
-        },
-        {
-          text: '儲存',
-          handler: data => {
-
-            this.CallAddOrEditApi(tree,data.content);
-            
-          }
-        }
-      ]
+    let loading = this.loadingCtrl.create({
+      content: "載入中",
     });
-    prompt.present();
+
+    $.post('http://13.230.19.21/test/Famliy.php', {
+
+            Action: 'SearchTree',
+            User : localStorage.getItem('User'),
+            Tree : tree,
+
+        }, (data) => {
+            var obj = $.parseJSON(data);
+
+            let prompt = this.alertCtrl.create({
+              title: '提醒',
+              message: "請輸入您要新增或修改的內容",
+              inputs: [
+                {
+                  name: 'content',
+                  value : obj.Content
+                },
+              ],
+              buttons: [
+                {
+                  text: '取消',
+                  handler: data => {
+                    
+                  }
+                },
+                {
+                  text: '儲存',
+                  handler: data => {
+        
+                    this.CallAddOrEditApi(tree,data.content);
+                    
+                  }
+                }
+              ]
+            });
+            prompt.present();
+            console.log(obj);
+            loading.dismiss();
+
+        })
+        .fail((err) => {
+
+        });
+
+   
 
   }
 

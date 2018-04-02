@@ -37,8 +37,10 @@ export class FamliySearchPage {
 
 
 
+  //計算機按鈕事件
   ChooseBtn(text){
 
+    //比對哪個按鈕按下去
     switch(text){
 
       case "爸爸":
@@ -79,15 +81,17 @@ export class FamliySearchPage {
       break;
       case "＝":
 
+        //用“的”來分割字串
         this.ResultArray = this.Result.split('的');
         console.log(this.ResultArray);
 
         if(this.ResultArray.length == 1){
 
-          //啥事都不做
+     
 
         }else if(this.ResultArray.length == 2){
 
+          //判斷結果
           if(this.ResultArray[0] == '爸爸' && this.ResultArray[1] == '爸爸'){
 
             this.Result = '祖父';

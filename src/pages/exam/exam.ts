@@ -46,11 +46,13 @@ export class ExamPage {
 
     }else{
 
+      //包裝要帶去下一頁的值
       const myData = {
         Gender : this.Gender,
         Difficulty : this.Difficulty
       }
 
+      //開啟不同跳轉方式的頁面
       const ExamModal =  this.modal.create(ExamModalPage,{data:myData});
       ExamModal.present();
 

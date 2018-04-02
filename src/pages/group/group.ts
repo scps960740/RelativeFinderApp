@@ -112,10 +112,13 @@ export class GroupPage {
         // targetWidth: 400
     }
 
+    //開啟相簿
     this
         .camera
         .getPicture(options)
         .then((imageData) => {
+
+            //取得選擇的相片轉乘base64的亂碼，一秒之後丟到serve
 
             this.base64Image = 'data:image/jpeg;base64,' + imageData;
 

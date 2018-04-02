@@ -1,6 +1,8 @@
+import { ResultModalPage } from './../result-modal/result-modal';
+import { ModalController } from 'ionic-angular/components/modal/modal-controller';
 import { ViewController } from 'ionic-angular/navigation/view-controller';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { FamilyServeProvider } from '../../providers/family-serve/family-serve';
 
 /**
@@ -53,13 +55,16 @@ export class ExamModalPage {
     public navCtrl: NavController, 
     public navParams: NavParams,
     public serve : FamilyServeProvider,
-    public view : ViewController
+    public view : ViewController,
+    private alertCtrl: AlertController,
+    public modal : ModalController
   ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ExamModalPage');
 
+    //在載入頁面的同時，取得上一頁帶過來的資料
     this.data = this.navParams.get('data');
 
     if(this.data.Gender == 'M'){
@@ -118,6 +123,42 @@ export class ExamModalPage {
 
   }
 
+
+  //跳出對話視窗
+  ShowResult(text){
+
+    let alert = this.alertCtrl.create({
+      title: '分數',
+      message: '您的分數為' + this.Result,
+      buttons: [
+        {
+          text: '查看答案',
+          handler: () => {
+
+            const mydata = {
+              id : text
+            }
+            const ResultPage = this.modal.create(ResultModalPage,{data : mydata});
+            ResultPage.present();
+            this.Result = 0;
+            
+            
+          }
+        },
+        {
+          text: '確認',
+          handler: () => {
+
+            this.Result = 0;
+            
+          }
+        }
+      ]
+    });
+    alert.present();
+
+  }
+
   GetResult(){
 
     if(this.data.Gender == 'M'){
@@ -132,6 +173,7 @@ export class ExamModalPage {
 
           this.serve.showAlert('提醒','您還有題目空著喲！','確定',null,false);
 
+        //判斷答案是否正確，正確加10分
         }else{
 
           if(this.Anwser1 == 'A'){
@@ -185,11 +227,15 @@ export class ExamModalPage {
             
           }
 
-          this.serve.showAlert('分數','您的分數為' + this.Result,'確定',()=>{
+          // this.serve.showAlert('分數','您的分數為' + this.Result,'確定',()=>{
 
-            this.Result = 0;
+          //   this.Result = 0;
 
-          },false);
+          // },false);
+
+          this.ShowResult('1');
+
+         
 
         }
 
@@ -255,11 +301,13 @@ export class ExamModalPage {
             
           }
 
-          this.serve.showAlert('分數','您的分數為' + this.Result,'確定',()=>{
+          // this.serve.showAlert('分數','您的分數為' + this.Result,'確定',()=>{
 
-            this.Result = 0;
+          //   this.Result = 0;
 
-          },false);
+          // },false);
+
+          this.ShowResult('2');
 
         }
 
@@ -332,11 +380,13 @@ export class ExamModalPage {
             
           }
 
-          this.serve.showAlert('分數','您的分數為' + this.Result,'確定',()=>{
+          // this.serve.showAlert('分數','您的分數為' + this.Result,'確定',()=>{
 
-            this.Result = 0;
+          //   this.Result = 0;
 
-          },false);
+          // },false);
+
+          this.ShowResult('3');
           
 
         }
@@ -403,12 +453,13 @@ export class ExamModalPage {
             
           }
 
-          this.serve.showAlert('分數','您的分數為' + this.Result,'確定',()=>{
+          // this.serve.showAlert('分數','您的分數為' + this.Result,'確定',()=>{
 
-            this.Result = 0;
+          //   this.Result = 0;
 
-          },false);
-          
+          // },false);
+
+          this.ShowResult('4');
 
         }
 

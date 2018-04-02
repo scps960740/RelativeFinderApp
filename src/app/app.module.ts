@@ -2,12 +2,10 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { IndexPage } from '../pages/index/index';
@@ -24,6 +22,7 @@ import { SoundPage } from '../pages/sound/sound';
 import { Media, MediaObject } from '@ionic-native/media';
 import {Camera} from '@ionic-native/camera';
 import {AndroidPermissions} from '@ionic-native/android-permissions';
+import { ResultModalPage } from '../pages/result-modal/result-modal';
 
 @NgModule({
   declarations: [
@@ -40,7 +39,8 @@ import {AndroidPermissions} from '@ionic-native/android-permissions';
     LoginPage,
     TreePage,
     GroupPage,
-    SoundPage
+    SoundPage,
+    ResultModalPage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +62,8 @@ import {AndroidPermissions} from '@ionic-native/android-permissions';
     LoginPage,
     TreePage,
     GroupPage,
-    SoundPage
+    SoundPage,
+    ResultModalPage
   ],
   providers: [
     StatusBar,

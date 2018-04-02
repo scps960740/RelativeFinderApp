@@ -9,6 +9,7 @@ import { IndexPage } from '../pages/index/index';
 import { ExamModalPage } from '../pages/exam-modal/exam-modal';
 import { ExamPage } from '../pages/exam/exam';
 import { TreePage } from '../pages/tree/tree';
+import { ResultModalPage } from '../pages/result-modal/result-modal';
 
 @Component({
   templateUrl: 'app.html'
