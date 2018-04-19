@@ -1,52 +1,52 @@
-<!--
-  Generated template for the FamliySearchPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
+<!-- Generated template for the FamliySearchPage page. See
+http://ionicframework.com/docs/components/#navigation for more info on Ionic
+pages and navigation. -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>稱 謂 查 詢</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>稱 謂 查 詢</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
+<ion-content style="height:100vh" class="BgColor" padding="padding">
 
-<ion-content padding>
+    <div class="TextBar">{{Result}}</div>
 
-  <div class="TextBar">{{Result}}</div>
+    <div class="press_group">
+        <div class="ColFlex">
+            <div (click)="ChooseBtn('爸爸')" class="ComBtn">爸爸</div>
+            <div (click)="ChooseBtn('媽媽')" class="ComBtn">媽媽</div>
+            <div (click)="ChooseBtn('哥哥')" class="ComBtn">哥哥</div>
+            <div (click)="ChooseBtn('ac')" class="ComBtn">ＡＣ</div>
+        </div>
 
-  <div class="ColFlex">
-    <div (click)="ChooseBtn('爸爸')" class="ComBtn">爸爸</div>
-    <div (click)="ChooseBtn('媽媽')" class="ComBtn">媽媽</div>
-    <div (click)="ChooseBtn('哥哥')" class="ComBtn">哥哥</div>
-    <div (click)="ChooseBtn('ac')" class="ComBtn">ＡＣ</div>
-  </div>
-  <div class="ColFlex">
-    <div (click)="ChooseBtn('弟弟')" class="ComBtn">弟弟</div>
-    <div (click)="ChooseBtn('姐姐')" class="ComBtn">姐姐</div>
-    <div (click)="ChooseBtn('妹妹')" class="ComBtn">妹妹</div>
-    <div (click)="ChooseBtn('的')" class="ComBtn">的</div>
-   
-  </div>
-  <div class="ColFlex">
-    <div (click)="ChooseBtn('太太')" class="ComBtn">太太</div>
-    <div (click)="ChooseBtn('丈夫')" class="ComBtn">丈夫</div>
-    <div (click)="ChooseBtn('兒子')" class="ComBtn">兒子</div>
-    <div (click)="ChooseBtn('＝')" class="ComBtn">＝</div>
-  </div>
-   <div class="ColFlex">
-    <div (click)="ChooseBtn('女兒')" class="ComBtn">女兒</div>
-    <div class="ComBtn"></div>
-    <div class="ComBtn"></div>
-    <div class="ComBtn"></div>
-  </div>
+        <div class="ColFlex">
+            <div (click)="ChooseBtn('弟弟')" class="ComBtn">弟弟</div>
+            <div (click)="ChooseBtn('姐姐')" class="ComBtn">姐姐</div>
+            <div (click)="ChooseBtn('妹妹')" class="ComBtn">妹妹</div>
+            <div (click)="ChooseBtn('的')" class="ComBtn">的</div>
+
+        </div>
+        <div class="ColFlex">
+            <div (click)="ChooseBtn('太太')" class="ComBtn">太太</div>
+            <div (click)="ChooseBtn('丈夫')" class="ComBtn">丈夫</div>
+            <div (click)="ChooseBtn('兒子')" class="ComBtn">兒子</div>
+            <div (click)="ChooseBtn('＝')" class="ComBtn">＝</div>
+        </div>
+        <div class="ColFlex">
+            <div (click)="ChooseBtn('女兒')" class="ComBtn">女兒</div>
+            <div class="ComBtn"></div>
+            <div class="ComBtn"></div>
+            <div class="ComBtn"></div>
+        </div>
+
+    </div>
 
 </ion-content>
-
+<!-- 
 <ion-footer class="IndexFooter">
 
-  Design By 資管四甲 We are family
+    Design By 資管四甲 We are family
 
-</ion-footer>
+</ion-footer> -->

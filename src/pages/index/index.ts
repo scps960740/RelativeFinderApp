@@ -27,7 +27,7 @@ export class IndexPage {
   goNextPage(){
 
     //跳轉到登入頁面
-    this.navCtrl.push(LoginPage,null);
+    this.navCtrl.push(SelectPage,null);
   }
 
 }
